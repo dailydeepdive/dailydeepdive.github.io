@@ -1,7 +1,7 @@
 # Daily Deep Dive (3D)
 
 A free daily blog, hosted on GitHub Pages, at
-https://awesomelyinnovatingai.github.io/daily-deep-dive/
+https://dailydeepdive.github.io/
 
 ## How a post gets published
 
@@ -26,4 +26,4 @@ GitHub Pages rebuilds the site about a minute after each push.
 
 ## Custom domain (optional)
 
-Buy a domain, add it under Settings → Pages → Custom domain, then in `_config.yml` set `url` to the domain and `baseurl` to `""`.
+Buy a domain, add it under Settings → Pages → Custom domain, then in `_config.yml` set `url` to the domain (`baseurl` is already `""`).

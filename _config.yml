@@ -9,10 +9,10 @@ author: Josh
 lang: en-US
 timezone: America/New_York
 
-# GitHub Pages address: https://awesomelyinnovatingai.github.io/daily-deep-dive
-# If you add a custom domain later, set url to it and baseurl to "".
-url: "https://awesomelyinnovatingai.github.io"
-baseurl: "/daily-deep-dive"
+# GitHub Pages address: https://dailydeepdive.github.io
+# If you add a custom domain later, set url to it (baseurl stays "").
+url: "https://dailydeepdive.github.io"
+baseurl: ""
 
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
