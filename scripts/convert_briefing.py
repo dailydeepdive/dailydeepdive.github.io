@@ -203,9 +203,23 @@ def main():
         if m:
             covering = m.group(1).strip()
             summary = m.group(2).strip()
-            summary = summary[0].upper() + summary[1:]
-            if not summary.endswith("."):
-                summary += "."
+    if not summary:
+        # Fallback: first ordinary paragraph that isn't the byline or reading-time line.
+        for l in raw[:first_h2]:
+            s = l.strip()
+            if not s or s.startswith("#") or "@" in s or s.lower().startswith("reading time"):
+                continue
+            summary = s
+            break
+    if not covering:
+        prev = day - dt.timedelta(days=1)
+        mon = {1: "Jan.", 2: "Feb.", 8: "Aug.", 9: "Sept.", 10: "Oct.", 11: "Nov.", 12: "Dec."}.get(
+            prev.month, prev.strftime("%B"))
+        covering = f"{prev:%A}, {mon} {prev.day}"
+    if summary:
+        summary = summary[0].upper() + summary[1:]
+        if not summary.endswith("."):
+            summary += "."
 
     body, sections, title = convert_body(raw[first_h2:], posts_dir)
     if not title:
