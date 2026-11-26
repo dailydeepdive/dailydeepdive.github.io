@@ -310,11 +310,5 @@ HP's fiscal Q4 2026 (Aug.–Oct. 2026) revenue was $16.0 billion, up 9.3% year o
 - **Deep dive:** the 13,000-20,000 firings a second, the 300-picoliter ThinkJet drop, Printing's ~27% of revenue and ~61% of segment operating profit, and Supplies' 64% share of Q4 Printing revenue are my own arithmetic from the cited figures<sup class="cite"><a href="#ref-16" title="Source 16">16</a>,<a href="#ref-17" title="Source 17">17</a>,<a href="#ref-7" title="Source 7">7</a></sup>. The kettle analogy is general background.
 - **Your Call #12:** threshold set at the latest quarter's reported decline (-2%)<sup class="cite"><a href="#ref-7" title="Source 7">7</a></sup>. HP rounds segment growth to whole percents; the question uses the release's stated figure.
 - **Spaced repetition** figures are as the earlier briefings reported them<sup class="cite"><a href="#ref-52" title="Source 52">52</a>,<a href="#ref-53" title="Source 53">53</a></sup>.
-- **Revision:** this is a revised version of the Nov. 26 briefing after an independent fact-check; see the change log in the review copy.
 
 </section>
-
-## Correction
-{: #correction}
-
-**Nov. 26, 2026:** An earlier version of this post, online briefly on Nov. 26, was replaced after an independent fact-check. That version said HP's Supplies revenue had not grown in any of the last three quarters; it grew 1% in fiscal Q2 2026, and the full five-quarter series is now shown. It also credited several news items to the wrong outlets, gave the wrong day for the Huawei verdict, and included figures we could not confirm (among them WTI crude, analyst estimates, Fed-futures odds and some deep-dive technical figures), which have been removed.
