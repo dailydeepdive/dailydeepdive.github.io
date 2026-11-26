@@ -1,0 +1,45 @@
+title: Daily Deep Dive
+short_title: 3D
+tagline: One topic, explained properly, every morning.
+description: >-
+  A daily briefing: a fact-only recap of yesterday's markets and world news,
+  then a deep dive into how something works and why it matters, with every
+  claim sourced.
+author: Josh
+lang: en-US
+timezone: America/New_York
+
+# GitHub Pages address: https://awesomelyinnovatingai.github.io/daily-deep-dive
+# If you add a custom domain later, set url to it and baseurl to "".
+url: "https://awesomelyinnovatingai.github.io"
+baseurl: "/daily-deep-dive"
+
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  toc_levels: 2
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .jekyll-cache/

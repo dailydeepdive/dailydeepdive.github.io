@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 230 | at_least: 1 %}
+<article class="post wrap-narrow">
+  <header class="post-header">
+    <p class="kicker">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
+      {% if page.covering %}<span class="dot">&middot;</span> Covering {{ page.covering }}{% endif %}
+      <span class="dot">&middot;</span> {{ minutes }} min read
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.field %}<p class="field-tag">{{ page.field }}</p>{% endif %}
+    {% if page.summary %}<p class="deck">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  {% if page.sections %}
+  <nav class="in-this-issue" aria-label="In this issue">
+    <span class="iti-label">In this issue</span>
+    <ol>
+      {% for s in page.sections %}
+      <li><a href="#{{ s.id }}"{% if s.deep %} class="deep"{% endif %}>{{ s.label }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}"><span>&larr; Previous</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+    {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><span>Next &rarr;</span>{{ page.next.title }}</a>{% endif %}
+  </nav>
+</article>

@@ -1,0 +1,39 @@
+---
+layout: default
+title: Daily Deep Dive (3D)
+---
+{% assign latest = site.posts | first %}
+<section class="hero wrap">
+  {% if latest %}
+  <p class="eyebrow">Today's deep dive &middot; {{ latest.date | date: "%A, %B %-d, %Y" }}</p>
+  <h1 class="hero-title"><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h1>
+  {% if latest.summary %}<p class="hero-deck">{{ latest.summary }}</p>{% endif %}
+  <a class="button" href="{{ latest.url | relative_url }}">Read the briefing &rarr;</a>
+  {% else %}
+  <h1 class="hero-title">The first briefing is on its way.</h1>
+  {% endif %}
+</section>
+
+<section class="wrap intro-strip">
+  <div><strong>Every morning</strong><span>A recap of yesterday's markets and world news, facts only.</span></div>
+  <div><strong>One deep dive</strong><span>How something works, where opinion stands, and why it matters.</span></div>
+  <div><strong>Your Call</strong><span>A dated yes/no prediction, scored when it settles.</span></div>
+</section>
+
+<section class="wrap recent">
+  <h2 class="section-label">Recent briefings</h2>
+  <ul class="post-list">
+    {% for post in site.posts offset: 1 limit: 14 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+      <div>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.field %}<span class="field-inline">{{ post.field }}</span>{% endif %}
+      </div>
+    </li>
+    {% else %}
+    <li class="empty">Past briefings will appear here as they're published.</li>
+    {% endfor %}
+  </ul>
+  {% if site.posts.size > 15 %}<p><a href="{{ '/archive/' | relative_url }}">See the full archive &rarr;</a></p>{% endif %}
+</section>

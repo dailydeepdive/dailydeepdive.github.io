@@ -1,0 +1,24 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+<section class="wrap-narrow page">
+  <h1 class="page-title">Archive</h1>
+  <p class="page-deck">Every deep dive, newest first.</p>
+  {% assign by_month = site.posts | group_by_exp: "p", "p.date | date: '%B %Y'" %}
+  {% for month in by_month %}
+  <h2 class="section-label">{{ month.name }}</h2>
+  <ul class="post-list">
+    {% for post in month.items %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+      <div>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.field %}<span class="field-inline">{{ post.field }}</span>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <span class="mark" aria-hidden="true">3D</span>
+        <span class="brand-text">
+          <span class="brand-name">{{ site.title }}</span>
+          <span class="brand-tag">{{ site.tagline }}</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}">Latest</a>
+        <a href="{{ '/archive/' | relative_url }}">Archive</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclaimer">Personal research and learning notes, published for general information. Nothing here is investment, tax or legal advice or a recommendation to buy or sell any security. Views are the author's own and not those of any employer. Market figures can contain errors; check the linked sources.</p>
+      <p class="fine">&copy; {{ 'now' | date: '%Y' }} {{ site.author }} &middot; Sources are credited on every post &middot; <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
+    </div>
+  </footer>
+</body>
+</html>
