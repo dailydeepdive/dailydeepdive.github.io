@@ -73,6 +73,22 @@ def find_post(posts: pathlib.Path, day: dt.date):
     return hits[0].stem if hits else None
 
 
+
+MONTHS = {m: i for i, m in enumerate(["January", "February", "March", "April", "May", "June", "July",
+                                       "August", "September", "October", "November", "December"], 1)}
+QUESTION_LINE = re.compile(r"\*\*The question \(#(\d+)\)[^*]*\*\*.*?Resolves by ([A-Z][a-z]+)\.? (\d{1,2}), (\d{4})")
+
+
+def poll_div(line):
+    """Return the Your Call poll placeholder for a 'The question (#N): ... Resolves by Month D, YYYY' line."""
+    m = QUESTION_LINE.search(line)
+    if not m or m.group(2)[:3] not in {k[:3] for k in MONTHS}:
+        return None
+    month = next(v for k, v in MONTHS.items() if k.startswith(m.group(2)[:3]))
+    qid = f"{m.group(1)}-{m.group(4)}{month:02d}{int(m.group(3)):02d}"
+    return f'<div class="dd-poll" data-q="{qid}"></div>'
+
+
 def convert_body(lines, posts_dir):
     out, sections = [], []
     title = None
@@ -121,6 +137,8 @@ def convert_body(lines, posts_dir):
             continue
 
         out.append(cites(PRIVATE_LINK.sub(r"\1", line)))
+        if in_your_call and poll_div(line):
+            out += ["", poll_div(line)]
         i += 1
 
     if in_your_call:

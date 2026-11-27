@@ -42,3 +42,6 @@ exclude:
   - Gemfile.lock
   - vendor/
   - .jekyll-cache/
+  - cloudflare/
+
+poll_api: ""   # set to the Cloudflare Worker URL, e.g. https://dd-polls.<account>.workers.dev

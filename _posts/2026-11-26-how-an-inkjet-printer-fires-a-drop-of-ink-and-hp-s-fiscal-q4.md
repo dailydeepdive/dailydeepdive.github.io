@@ -234,6 +234,8 @@ HP's fiscal Q4 2026 (Aug.–Oct. 2026) revenue was $16.0 billion, up 9.3% year o
 
 **The question (#12):** Will HP's fiscal Q1 2027 earnings release report Supplies revenue down 2% or less year over year (flat or growth also counts as Yes), using the as-reported figure rather than constant currency? Resolves by March 15, 2027. Settled by: HP Inc.'s fiscal Q1 2027 earnings release (Form 8-K Ex. 99.1 on SEC EDGAR)<sup class="cite"><a href="#ref-7" title="Source 7">7</a></sup>.
 
+<div class="dd-poll" data-q="12-20270315"></div>
+
 </div>
 
 <section class="references" markdown="1">

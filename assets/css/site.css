@@ -253,3 +253,26 @@ sup.cite a:hover { text-decoration: underline; }
 
 .footer-wave { top: -1px; bottom: auto; height: 16px; fill: var(--paper); }
 ::selection { background: var(--accent-soft); }
+
+/* Your Call reader poll */
+.dd-poll { margin: 1.25rem 0 .5rem; padding: 1rem 1.1rem 1.1rem; background: var(--paper); border: 1px solid var(--rule); border-radius: .55rem; font-family: var(--sans); font-size: .9rem; }
+.dd-poll:empty { display: none; }
+.poll-title { margin: 0 0 .7rem; font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.poll-form { display: grid; grid-template-columns: 4.2rem 1fr auto; gap: .9rem; align-items: center; }
+.poll-readout { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--deep); font-variant-numeric: tabular-nums; }
+@media (prefers-color-scheme: dark) { .poll-readout { color: var(--accent); } }
+.poll-slider { width: 100%; accent-color: var(--accent); cursor: pointer; }
+.poll-button { font: 600 .88rem var(--sans); background: var(--accent); color: #fff; border: 0; border-radius: .45rem; padding: .6rem 1rem; cursor: pointer; }
+.poll-button:hover { filter: brightness(1.08); }
+.poll-button:disabled { opacity: .6; cursor: wait; }
+.poll-note { margin: .7rem 0 0; color: var(--ink-faint); font-size: .82rem; }
+.poll-results { margin-top: .9rem; }
+.poll-chart { position: relative; display: grid; grid-template-columns: repeat(21, 1fr); gap: 2px; height: 5.5rem; align-items: end; border-bottom: 1px solid var(--rule); }
+.poll-col { height: 100%; display: flex; align-items: flex-end; }
+.poll-bar { width: 100%; background: var(--accent); opacity: .45; border-radius: 3px 3px 0 0; }
+.poll-col.mine .poll-bar { opacity: 1; }
+.poll-median { position: absolute; top: 0; bottom: -4px; width: 0; border-left: 2px dashed var(--gold); }
+.poll-axis { display: flex; justify-content: space-between; color: var(--ink-faint); font-size: .72rem; margin-top: .3rem; }
+.poll-stats { margin: .55rem 0 0; color: var(--ink-soft); }
+.poll-stats strong { color: var(--ink); }
+@media (max-width: 560px) { .poll-form { grid-template-columns: 3.6rem 1fr; } .poll-button { grid-column: 1 / -1; } }

@@ -213,6 +213,8 @@ Fiscal Q1 2026 is the smallest quarter in this series, and Deere said its 3% gai
 
 **The question (#13):** Will Deere's fiscal Q1 2027 earnings release report Production & Precision Agriculture net sales higher than $3.163 billion, the fiscal Q1 2026 figure? Resolves by March 15, 2027. Settled by: Deere & Company's fiscal Q1 2027 earnings release (Form 8-K Ex. 99.1 on SEC EDGAR)<sup class="cite"><a href="#ref-50" title="Source 50">50</a></sup>.
 
+<div class="dd-poll" data-q="13-20270315"></div>
+
 
 </div>
 
