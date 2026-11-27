@@ -15,7 +15,7 @@
   <header class="masthead">
     <div class="wrap masthead-inner">
       <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-        <span class="mark" aria-hidden="true">3D</span>
+        <span class="mark">{% include dive-mask.svg %}</span>
         <span class="brand-text">
           <span class="brand-name">{{ site.title }}</span>
           <span class="brand-tag">{{ site.tagline }}</span>
@@ -28,6 +28,8 @@
         <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </nav>
     </div>
+    <div class="bubbles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <svg class="wave-edge" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path class="wave-back" d="M0 16 C160 4 300 6 460 16 S760 30 920 16 S1240 4 1440 14 V40 H0 Z"/><path d="M0 22 C120 8 240 8 360 20 S600 34 720 22 S960 6 1080 18 S1320 34 1440 20 V40 H0 Z"/></svg>
   </header>
 
   <main id="main">
@@ -35,6 +37,7 @@
   </main>
 
   <footer class="site-footer">
+    <svg class="wave-edge footer-wave" viewBox="0 0 1440 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 C180 2 360 2 540 14 S900 26 1080 14 S1320 4 1440 12 V0 H0 Z"/></svg>
     <div class="wrap">
       <p class="disclaimer">Personal research and learning notes, published for general information. Nothing here is investment, tax or legal advice or a recommendation to buy or sell any security. Views are the author's own and not those of any employer. Market figures can contain errors; check the linked sources.</p>
       <p class="fine">&copy; {{ 'now' | date: '%Y' }} {{ site.author }} &middot; Sources are credited on every post &middot; <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>

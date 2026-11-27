@@ -3,6 +3,10 @@ layout: default
 ---
 {% assign words = content | strip_html | number_of_words %}
 {% assign minutes = words | divided_by: 230 | at_least: 1 %}
+{% assign dd_html = content | split: 'id="deep-dive"' | last | split: 'class="references"' | first %}
+{% assign dd_words = dd_html | strip_html | number_of_words %}
+{% assign dd_minutes = dd_words | plus: 115 | divided_by: 230 | at_least: 1 %}
+{% assign has_dd = false %}{% if content contains 'id="deep-dive"' %}{% assign has_dd = true %}{% endif %}
 <article class="post wrap-narrow">
   <header class="post-header">
     <p class="kicker">
@@ -20,14 +24,14 @@ layout: default
     <span class="iti-label">In this issue</span>
     <ol>
       {% for s in page.sections %}
-      <li><a href="#{{ s.id }}"{% if s.deep %} class="deep"{% endif %}>{{ s.label }}</a></li>
+      <li{% if s.deep %} class="deep-item"{% endif %}><a href="#{{ s.id }}"{% if s.deep %} class="deep"{% endif %}>{{ s.label }}{% if s.deep and has_dd %} <span class="dd-time">({{ dd_minutes }} min read)</span>{% endif %}</a></li>
       {% endfor %}
     </ol>
   </nav>
   {% endif %}
 
   <div class="post-body">
-    {{ content }}
+    {% if has_dd %}{% capture dd_attr %}id="deep-dive" data-minutes="{{ dd_minutes }}"{% endcapture %}{{ content | replace: 'id="deep-dive"', dd_attr }}{% else %}{{ content }}{% endif %}
   </div>
 
   <nav class="post-nav" aria-label="More posts">

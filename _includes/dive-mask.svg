@@ -1,0 +1,13 @@
+<svg class="dive-mask" viewBox="0 0 56 48" aria-hidden="true" focusable="false">
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 22 H1.5 M48 22 H46" opacity=".55"/>
+    <path d="M10 13 H38 Q44 13 44 19 V26 Q44 33 37 33 H31 L27.5 28.5 H22.5 L19 33 H13 Q6 33 6 26 V19 Q6 13 10 13 Z"/>
+    <path class="lens" d="M11 17.5 H22.5 V27 Q22.5 29 20.5 29 H14 Q10.5 29 10.5 25.5 V18 Q10.5 17.5 11 17.5 Z M27.5 17.5 H39 Q39.5 17.5 39.5 18 V25.5 Q39.5 29 36 29 H29.5 Q27.5 29 27.5 27 Z" stroke-width="1.6"/>
+    <path d="M47 38 V14 Q47 8 52 8" stroke-width="2.4"/>
+  </g>
+  <g fill="currentColor" class="mask-bubbles">
+    <circle cx="51" cy="4.2" r="1.6"/>
+    <circle cx="46.5" cy="2.3" r="1.1"/>
+    <circle cx="53.6" cy="1" r=".8"/>
+  </g>
+</svg>
