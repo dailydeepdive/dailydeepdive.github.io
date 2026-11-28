@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 </head>
 <body>
@@ -43,6 +43,6 @@
       <p class="fine">&copy; {{ 'now' | date: '%Y' }} {{ site.author }} &middot; Sources are credited on every post &middot; <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
     </div>
   </footer>
-  {% if site.poll_api and site.poll_api != "" %}<script src="{{ '/assets/js/poll.js' | relative_url }}" defer></script>{% endif %}
+  {% if site.poll_api and site.poll_api != "" %}<script src="{{ '/assets/js/poll.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
 </body>
 </html>

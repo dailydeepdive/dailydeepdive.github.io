@@ -9,6 +9,7 @@ layout: default
 {% if page.deep_minutes %}{% assign dd_minutes = page.deep_minutes %}{% endif %}
 {% assign has_dd = false %}{% if content contains 'id="deep-dive"' %}{% assign has_dd = true %}{% endif %}
 <article class="post wrap-narrow">
+  {% assign pn_anchor = "" %}{% assign pn_noun = "briefing" %}{% assign pn_class = "pn-top" %}{% include pn-row.html %}
   <header class="post-header">
     <p class="kicker">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d, %Y" }}</time>
@@ -32,7 +33,7 @@ layout: default
   {% endif %}
 
   <div class="post-body">
-    {% capture dd_nav %}{% if page.previous or page.next %}<nav class="dd-nav" aria-label="Other deep dives">{% if page.previous %}<a class="dd-prev" href="{{ page.previous.url | relative_url }}#deep-dive" title="{{ page.previous.title | escape }}"><span class="dd-arrow" aria-hidden="true">&larr;</span><span class="dd-nav-text"><small>Previous deep dive &middot; {{ page.previous.date | date: "%b %-d" }}</small>{{ page.previous.title }}</span></a>{% else %}<span></span>{% endif %}{% if page.next %}<a class="dd-next" href="{{ page.next.url | relative_url }}#deep-dive" title="{{ page.next.title | escape }}"><span class="dd-nav-text"><small>Next deep dive &middot; {{ page.next.date | date: "%b %-d" }}</small>{{ page.next.title }}</span><span class="dd-arrow" aria-hidden="true">&rarr;</span></a>{% endif %}</nav>{% endif %}{% endcapture %}
+    {% assign pn_anchor = "#deep-dive" %}{% assign pn_noun = "deep dive" %}{% assign pn_class = "pn-dd" %}{% capture dd_nav %}{% include pn-row.html %}{% endcapture %}
     {% assign body = content | replace: '<div class="dd-nav-slot"></div>', dd_nav %}
     {% if has_dd %}{% capture dd_attr %}id="deep-dive" data-minutes="{{ dd_minutes }}"{% endcapture %}{{ body | replace: 'id="deep-dive"', dd_attr }}{% else %}{{ body }}{% endif %}
   </div>
