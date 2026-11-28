@@ -44,4 +44,4 @@ exclude:
   - .jekyll-cache/
   - cloudflare/
 
-poll_api: ""   # set to the Cloudflare Worker URL, e.g. https://dd-polls.<account>.workers.dev
+poll_api: "https://dd-polls.jhughesenterprise.workers.dev"
