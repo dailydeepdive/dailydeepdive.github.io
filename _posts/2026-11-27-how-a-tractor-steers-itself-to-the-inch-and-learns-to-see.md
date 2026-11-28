@@ -5,6 +5,7 @@ covering: "Thursday, Nov. 26"
 summary: "U.S. stock and bond markets were closed for Thanksgiving, NATO authorized an AWACS radar plane for Poland, the Macy's parade, moved to Saturday over a storm forecast, did not run, and the Bears and Eagles won with late scores."
 description: "U.S. stock and bond markets were closed for Thanksgiving, NATO authorized an AWACS radar plane for Poland, the Macy's parade, moved to Saturday over a storm forecast, did not run, and the Bears and Eagles won with late scores."
 field: "agricultural engineering / satellite navigation and machine vision"
+deep_minutes: 12
 sections:
   - { label: "Markets", id: markets }
   - { label: "Politics and world", id: politics-and-world }

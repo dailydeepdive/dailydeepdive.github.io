@@ -89,6 +89,17 @@ def poll_div(line):
     return f'<div class="dd-poll" data-q="{qid}"></div>'
 
 
+def deep_dive_minutes(md_lines):
+    """Reading time of the deep dive (Your Call included), at 230 words a minute, rounded."""
+    text = "\n".join(md_lines)
+    if "{: #deep-dive" not in text:
+        return None
+    dd = text.split("{: #deep-dive", 1)[1]
+    dd = re.sub(r"<sup class=\"cite\">.*?</sup>", " ", dd)
+    dd = re.sub(r"<[^>]+>|\{:[^}]*\}|\|[- |]*\||[*#|]", " ", dd)
+    return max(1, round(len(dd.split()) / 230))
+
+
 def convert_body(lines, posts_dir):
     out, sections = [], []
     title = None
@@ -252,6 +263,7 @@ def main():
           f"summary: {yaml_str(summary)}" if summary else None,
           f"description: {yaml_str(summary)}" if summary else None,
           f"field: {yaml_str(args.field)}" if args.field else None,
+          f"deep_minutes: {deep_dive_minutes(body)}" if deep_dive_minutes(body) else None,
           "sections:"]
     fm = [x for x in fm if x is not None]
     for s in sections:

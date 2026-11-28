@@ -5,6 +5,7 @@ covering: "Wednesday, Nov. 25"
 summary: "The Nasdaq fell as much as 4.6% before closing down 0.62%, the Dow erased a 1,100-point drop to close higher, core PCE inflation rose to 3.3%, and HP rose 11.5%."
 description: "The Nasdaq fell as much as 4.6% before closing down 0.62%, the Dow erased a 1,100-point drop to close higher, core PCE inflation rose to 3.3%, and HP rose 11.5%."
 field: "Technology"
+deep_minutes: 10
 sections:
   - { label: "Markets", id: markets }
   - { label: "Politics and world", id: politics-and-world }

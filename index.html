@@ -10,6 +10,7 @@ title: Daily Deep Dive (3D)
   {% if latest.summary %}<p class="hero-deck">{{ latest.summary }}</p>{% endif %}
   {% assign dd_html = latest.content | split: 'id="deep-dive"' | last | split: 'class="references"' | first %}
   {% assign dd_minutes = dd_html | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 %}
+  {% if latest.deep_minutes %}{% assign dd_minutes = latest.deep_minutes %}{% endif %}
   <div class="hero-actions">
     <a class="button" href="{{ latest.url | relative_url }}">Read the briefing &rarr;</a>
     {% if latest.content contains 'id="deep-dive"' %}<a class="dive-link" href="{{ latest.url | relative_url }}#deep-dive">&darr; Dive straight in <span class="dd-time">({{ dd_minutes }} min read)</span></a>{% endif %}

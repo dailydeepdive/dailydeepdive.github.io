@@ -148,16 +148,12 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .iti-label { display: block; font-weight: 600; margin-bottom: .4rem; }
 .in-this-issue ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 2rem; }
-.in-this-issue li { position: relative; margin: 0 0 .3rem; padding-left: 1.15rem; break-inside: avoid; }
-.in-this-issue li::before {
-  content: ""; position: absolute; left: .1rem; top: .45em; width: .5rem; height: .5rem; border-radius: 50%;
-  border: 1.5px solid var(--accent); background: var(--accent-soft);
-}
-.in-this-issue li.deep-item::before { background: var(--accent); }
+.in-this-issue li { margin: 0 0 .35rem; break-inside: avoid; }
 .in-this-issue .dd-time { font-weight: 400; color: var(--ink-soft); white-space: nowrap; }
-.in-this-issue a { color: var(--ink); text-decoration: none; }
-.in-this-issue a:hover { color: var(--accent); }
-.in-this-issue a.deep { color: var(--accent); font-weight: 600; }
+.in-this-issue a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink-faint); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.in-this-issue a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.in-this-issue a.deep { color: var(--accent); font-weight: 600; text-decoration-color: currentColor; }
+.in-this-issue a .dd-time { display: inline-block; margin-left: .3em; text-decoration: none; }
 @media (max-width: 560px) { .in-this-issue ol { columns: 1; } }
 
 .post-body h2 {
