@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
-  {% feed_meta %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -39,7 +38,7 @@
     <svg class="wave-edge footer-wave" viewBox="0 0 1440 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 C180 2 360 2 540 14 S900 26 1080 14 S1320 4 1440 12 V0 H0 Z"/></svg>
     <div class="wrap">
       <p class="disclaimer">Personal research and learning notes, published for general information. Nothing here is investment, tax or legal advice or a recommendation to buy or sell any security. Views are the author's own and not those of any employer. Market figures can contain errors; check the linked sources.</p>
-      <p class="fine">&copy; {{ 'now' | date: '%Y' }} {{ site.author }} &middot; Sources are credited on every post &middot; <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
+      <p class="fine">&copy; {{ 'now' | date: '%Y' }} {{ site.author }} &middot; Sources are credited on every post</p>
     </div>
   </footer>
   {% if site.poll_api and site.poll_api != "" %}<script src="{{ '/assets/js/poll.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>{% endif %}
