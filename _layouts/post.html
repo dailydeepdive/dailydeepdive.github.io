@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-{% assign words = content | strip_html | number_of_words %}
-{% assign minutes = words | divided_by: 230 | at_least: 1 %}
+{% assign words = content | split: 'class="references"' | first | strip_html | number_of_words %}
+{% assign minutes = words | plus: 115 | divided_by: 230 | at_least: 1 %}
 {% assign dd_html = content | split: 'id="deep-dive"' | last | split: 'class="references"' | first %}
 {% assign dd_words = dd_html | strip_html | number_of_words %}
 {% assign dd_minutes = dd_words | plus: 115 | divided_by: 230 | at_least: 1 %}

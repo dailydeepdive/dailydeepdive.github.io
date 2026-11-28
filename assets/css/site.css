@@ -226,6 +226,9 @@ sup.cite a:hover { text-decoration: underline; }
 .dive-link { font-family: var(--sans); font-size: .92rem; font-weight: 600; text-decoration: none; }
 .dive-link:hover { text-decoration: underline; }
 .dive-link .dd-time { font-weight: 400; color: var(--ink-soft); }
+.dive { display: flex; flex-direction: column; gap: .15rem; }
+.dive-note { font-family: var(--sans); font-size: .82rem; color: var(--ink-soft); }
+.button .btn-time { font-weight: 400; opacity: .85; }
 
 /* Prev / next */
 .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }

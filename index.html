@@ -11,9 +11,10 @@ title: Daily Deep Dive (3D)
   {% assign dd_html = latest.content | split: 'id="deep-dive"' | last | split: 'class="references"' | first %}
   {% assign dd_minutes = dd_html | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 %}
   {% if latest.deep_minutes %}{% assign dd_minutes = latest.deep_minutes %}{% endif %}
+  {% assign full_minutes = latest.content | split: 'class="references"' | first | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 %}
   <div class="hero-actions">
-    <a class="button" href="{{ latest.url | relative_url }}">Read the full briefing &rarr;</a>
-    {% if latest.content contains 'id="deep-dive"' %}<a class="dive-link" href="{{ latest.url | relative_url }}#deep-dive">&darr; Dive straight in <span class="dd-time">({{ dd_minutes }} min read)</span></a>{% endif %}
+    <a class="button" href="{{ latest.url | relative_url }}">Read the full briefing &rarr; <span class="btn-time">(about {{ full_minutes }} min)</span></a>
+    {% if latest.content contains 'id="deep-dive"' %}<div class="dive"><a class="dive-link" href="{{ latest.url | relative_url }}#deep-dive">&darr; Dive straight in <span class="dd-time">({{ dd_minutes }} min read)</span></a><span class="dive-note">Jumps past the recap to the heart of the briefing: today's deep dive.</span></div>{% endif %}
   </div>
   {% else %}
   <h1 class="hero-title">The first briefing is on its way.</h1>
@@ -21,7 +22,7 @@ title: Daily Deep Dive (3D)
 </section>
 
 <section class="wrap intro-strip">
-  <div><strong>Every morning, full recap</strong><span>A recap of yesterday's markets and world news, facts only.</span></div>
+  <div><strong>Yesterday, recapped</strong><span>Markets and world news, facts only, plus quick hits from science, health, tech, sports and more. Closed on Sundays, like any good diner.</span></div>
   <div><strong>One deep dive</strong><span>How something works, where opinion stands, and why it matters.</span></div>
   <div><strong>Your Call</strong><span>A dated yes/no prediction, scored when it settles.</span></div>
 </section>
