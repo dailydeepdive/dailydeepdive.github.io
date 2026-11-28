@@ -7,7 +7,7 @@ permalink: /about/
 
 # About Daily Deep Dive
 
-Daily Deep Dive (3D) is a 15-20 minute read published each morning. The goal is to build real knowledge of the industries and businesses that power the world: how their products and systems actually work, and, along the way, why they matter.
+Daily Deep Dive (3D) is about a 20-minute read, published Monday through Saturday mornings (closed on Sundays). The goal is to build real knowledge of the industries and businesses that power the world: how their products and systems actually work, and, along the way, why they matter.
 
 ## What's in each briefing
 
@@ -15,7 +15,7 @@ Daily Deep Dive (3D) is a 15-20 minute read published each morning. The goal is 
 2. **Politics and world.** Facts only: who said what, with no side taken.
 3. **Quick hits.** A few short items from the previous day, each from a different area (science, space, health, technology, sports and more), dated to when the news first came out.
 4. **Spaced repetition.** A short refresher on two earlier deep dives, so the ideas stick.
-5. **The deep dive.** One new topic each day: the people and history behind it, how it works in plain language, and why it matters.
+5. **The deep dive.** One new topic in each briefing: the people and history behind it, how it works in plain language, and why it matters.
 6. **Your Call.** What named sources say about where things go next, the one variable to watch, and a dated yes/no question that a named public source will settle. Readers can add their own probability and see how everyone else answered.
 
 ## How it's made
