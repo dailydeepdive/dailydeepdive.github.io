@@ -1,0 +1,10 @@
+{%- assign pa_post = include.post -%}
+{%- assign pa_full = pa_post.content | split: 'class="references"' | first | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 -%}
+{%- assign pa_dd = pa_post.content | split: 'id="deep-dive"' | last | split: 'class="references"' | first | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 -%}
+{%- if pa_post.deep_minutes -%}{%- assign pa_dd = pa_post.deep_minutes -%}{%- endif -%}
+<div class="post-actions">
+  <a class="chip chip-brief" href="{{ pa_post.url | relative_url }}"><span class="chip-icon">{% include news-icon.svg %}</span><span>Read full briefing <span class="chip-time">({{ pa_full }} min read)</span></span></a>
+  {%- if pa_post.content contains 'id="deep-dive"' %}
+  <a class="chip chip-dive" href="{{ pa_post.url | relative_url }}#deep-dive"><span class="chip-icon">{% include dive-mask.svg %}</span><span>Dive straight in <span class="chip-time">({{ pa_dd }} min read)</span></span></a>
+  {%- endif %}
+</div>

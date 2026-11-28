@@ -36,6 +36,7 @@ title: Daily Deep Dive (3D)
       <div>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         {% if post.field %}<span class="field-inline">{{ post.field }}</span>{% endif %}
+        {% include post-actions.html post=post %}
       </div>
     </li>
     {% else %}
