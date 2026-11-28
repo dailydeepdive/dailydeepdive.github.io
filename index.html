@@ -13,7 +13,7 @@ title: Daily Deep Dive (3D)
   {% if latest.deep_minutes %}{% assign dd_minutes = latest.deep_minutes %}{% endif %}
   {% assign full_minutes = latest.content | split: 'class="references"' | first | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 %}
   <div class="hero-actions">
-    <a class="button brief-card" href="{{ latest.url | relative_url }}"><span class="mark brief-mark">{% include news-icon.svg %}</span><span>Read the full briefing &rarr; <span class="btn-time">(about {{ full_minutes }} min)</span></span></a>
+    <a class="button brief-card" href="{{ latest.url | relative_url }}"><span class="mark brief-mark">{% include news-icon.svg %}</span><span>Read full briefing &rarr; <span class="btn-time">({{ full_minutes }} min read)</span></span></a>
     {% if latest.content contains 'id="deep-dive"' %}<a class="dive-card" href="{{ latest.url | relative_url }}#deep-dive"><span class="mark">{% include dive-mask.svg %}</span><span class="dive-text"><span class="dive-main">Dive straight in &darr; <span class="dd-time">({{ dd_minutes }} min read)</span></span><span class="dive-note">Jumps past the market and news recap to the heart of the briefing: today's deep dive.</span></span></a>{% endif %}
   </div>
   {% else %}

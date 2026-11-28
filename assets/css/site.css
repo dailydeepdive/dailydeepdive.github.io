@@ -224,7 +224,8 @@ sup.cite a:hover { text-decoration: underline; }
 /* Home: jump straight to the deep dive */
 .hero-actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: .9rem 1rem; }
 .hero-actions .button { display: inline-flex; align-items: center; }
-.button .btn-time { font-weight: 400; opacity: .85; margin-left: .3em; }
+.button .btn-time { font-weight: 400; opacity: .92; white-space: nowrap; }
+.dive-main .dd-time { white-space: nowrap; }
 /* "Read the full briefing" card: a lighter-blue gradient with the same faint waves */
 .brief-card {
   gap: .7rem; padding: .6rem 1.15rem .6rem .9rem; color: #fff;
@@ -256,7 +257,7 @@ sup.cite a:hover { text-decoration: underline; }
 .dive-note { font-size: .8rem; color: #fff; opacity: .94; }
 @media (prefers-color-scheme: dark) { .dive-card { border: 1px solid rgba(95,184,214,.35); } }
 @media (prefers-reduced-motion: reduce) { .dive-card:hover .mask-bubbles { animation: none; } }
-@media (max-width: 560px) { .hero-actions .button, .dive-card { flex: 1 1 100%; max-width: none; } }
+@media (max-width: 560px) { .hero-actions .button, .dive-card { flex: 1 1 100%; max-width: none; } .brief-card { gap: .55rem; padding-right: .8rem; } }
 
 /* Prev / next */
 .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
