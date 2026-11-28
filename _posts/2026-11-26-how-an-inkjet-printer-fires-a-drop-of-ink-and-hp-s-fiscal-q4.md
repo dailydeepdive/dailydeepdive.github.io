@@ -117,6 +117,8 @@ Two earlier deep dives: the one from one day before today's covered day, and the
 ## Deep dive: How an inkjet printer fires a drop of ink, and HP's fiscal Q4
 {: #deep-dive .deep-dive-head}
 
+<div class="dd-nav-slot"></div>
+
 In the mid-1970s at Canon in Japan, a hot soldering iron accidentally touched the needle of a syringe full of ink, and ink spurted out<sup class="cite"><a href="#ref-22" title="Source 22">22</a></sup>. Ichiro Endo saw what had happened, and within days his team had a working model of what became the Canon Bubble Jet printer<sup class="cite"><a href="#ref-15" title="Source 15">15</a></sup>. Canon filed its basic patent application in October 1977<sup class="cite"><a href="#ref-23" title="Source 23">23</a></sup>. Around the same time, and independently, John Vaught at HP Laboratories arrived at the same idea<sup class="cite"><a href="#ref-15" title="Source 15">15</a>,<a href="#ref-16" title="Source 16">16</a></sup>.
 
 ### The short version

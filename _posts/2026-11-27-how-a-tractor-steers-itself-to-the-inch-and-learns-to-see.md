@@ -105,6 +105,8 @@ The rival, Epson's piezoelectric head, squeezes ink with a crystal that bends un
 ## Deep dive: How a tractor steers itself to the inch and learns to see weeds, and Deere's fiscal Q4
 {: #deep-dive .deep-dive-head}
 
+<div class="dd-nav-slot"></div>
+
 The farmers of the Illinois prairie had a problem in the 1830s: their cast-iron plows were "not working very well in the tough prairie soil"<sup class="cite"><a href="#ref-15" title="Source 15">15</a></sup>, which the Smithsonian describes as "the rich, sticky, black almost-mud of the Midwestern prairies"<sup class="cite"><a href="#ref-16" title="Source 16">16</a></sup>. In his blacksmith shop in Grand Detour, Illinois, John Deere "took a large circular saw blade, cut off the teeth and reshaped the metal into a curving parallelogram"<sup class="cite"><a href="#ref-16" title="Source 16">16</a></sup>. The result, in the Smithsonian's words: "it scoured"<sup class="cite"><a href="#ref-16" title="Source 16">16</a></sup>. Wikipedia dates the first commercially successful plow to 1837; the Smithsonian places it in 1838<sup class="cite"><a href="#ref-15" title="Source 15">15</a>,<a href="#ref-16" title="Source 16">16</a></sup>. Nearly two centuries later, the company he founded is trying to solve a different farm problem with a different tool: making a giant machine drive a line straight to within an inch, and making a sprayer that looks at every plant and only hits the weeds.
 
 ### The short version

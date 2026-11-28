@@ -119,7 +119,7 @@ def convert_body(lines, posts_dir):
             if key == "deep dive":
                 title = heading.split(":", 1)[1].strip() if ":" in heading else heading
                 sections.append({"label": "Deep dive", "id": sid, "deep": True})
-                out += [f"## {heading}", "{: #" + sid + " .deep-dive-head}"]
+                out += [f"## {heading}", "{: #" + sid + " .deep-dive-head}", "", '<div class="dd-nav-slot"></div>', ""]
             else:
                 sections.append({"label": heading.split(":")[0].strip(), "id": sid, "deep": False})
                 out += [f"## {heading}", "{: #" + sid + "}"]
