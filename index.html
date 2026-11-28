@@ -14,7 +14,7 @@ title: Daily Deep Dive (3D)
   {% assign full_minutes = latest.content | split: 'class="references"' | first | strip_html | number_of_words | plus: 115 | divided_by: 230 | at_least: 1 %}
   <div class="hero-actions">
     <a class="button" href="{{ latest.url | relative_url }}">Read the full briefing &rarr; <span class="btn-time">(about {{ full_minutes }} min)</span></a>
-    {% if latest.content contains 'id="deep-dive"' %}<a class="dive-card" href="{{ latest.url | relative_url }}#deep-dive"><span class="mark">{% include dive-mask.svg %}</span><span class="dive-text"><span class="dive-main">Dive straight in &darr; <span class="dd-time">({{ dd_minutes }} min read)</span></span><span class="dive-note">Jumps past the recap to the heart of the briefing: today's deep dive.</span></span></a>{% endif %}
+    {% if latest.content contains 'id="deep-dive"' %}<a class="dive-card" href="{{ latest.url | relative_url }}#deep-dive"><span class="mark">{% include dive-mask.svg %}</span><span class="dive-text"><span class="dive-main">Dive straight in &darr; <span class="dd-time">({{ dd_minutes }} min read)</span></span><span class="dive-note">Jumps past the market and news recap to the heart of the briefing: today's deep dive.</span></span></a>{% endif %}
   </div>
   {% else %}
   <h1 class="hero-title">The first briefing is on its way.</h1>
