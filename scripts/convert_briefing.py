@@ -236,7 +236,8 @@ def main():
         # Fallback: first ordinary paragraph that isn't the byline or reading-time line.
         for l in raw[:first_h2]:
             s = l.strip()
-            if not s or s.startswith("#") or "@" in s or s.lower().startswith("reading time"):
+            if (not s or s.startswith("#") or "@" in s or s.lower().startswith("reading time")
+                    or s.strip("*").lower().startswith("when diving deep")):
                 continue
             summary = s
             break
@@ -249,6 +250,15 @@ def main():
         summary = summary[0].upper() + summary[1:]
         if not summary.endswith("."):
             summary += "."
+    # Optional deep-dive teaser line: "When diving deep, learn about ...", appended to the summary.
+    for l in raw[:first_h2]:
+        s = re.sub(r"\\?\[\d+\\?\]", "", l.strip().strip("*").strip()).strip()
+        if s.lower().startswith("when diving deep"):
+            s = re.sub(r"\s+", " ", s)
+            if not s.endswith("."):
+                s += "."
+            summary = (summary + " " + s).strip()
+            break
 
     body, sections, title = convert_body(raw[first_h2:], posts_dir)
     if not title:
